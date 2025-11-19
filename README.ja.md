@@ -18,6 +18,23 @@ TypeScript を中心に設計された Web Audio ツールキットです。ピ�
 npm install web-audio-piano
 ```
 
+公開前にリポジトリから直接インストールして試すこともできます:
+
+```bash
+# デフォルトブランチの最新をインストール
+npm install github:Kazunari-h/web-audio-piano
+
+# または HTTPS の Git URL を指定
+npm install git+https://github.com/Kazunari-h/web-audio-piano.git
+
+# ブランチやタグ、コミットを指定する例
+npm install github:Kazunari-h/web-audio-piano#main
+```
+
+注意:
+- Git 経由インストール時にリポジトリ内の `prepare` スクリプトが実行され（本リポジトリでは `npm run build` を実行します）、`dist/` のビルド成果物が生成されます。
+- `package.json` の `engines` に合わせて Node.js 20 以上を使用してください。
+
 ```ts
 import Piano from "web-audio-piano";
 

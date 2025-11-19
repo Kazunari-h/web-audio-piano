@@ -17,6 +17,23 @@ TypeScript-first Web Audio toolkit with a piano synth class, ADSR envelope, note
 npm install web-audio-piano
 ```
 
+Or install directly from the GitHub repository (useful before publishing to npm):
+
+```bash
+# install latest from the default branch
+npm install github:Kazunari-h/web-audio-piano
+
+# or via full git URL
+npm install git+https://github.com/Kazunari-h/web-audio-piano.git
+
+# install a specific branch, tag or commit
+npm install github:Kazunari-h/web-audio-piano#main
+```
+
+Notes:
+- The package includes a `prepare` script that runs `npm run build` when installing from git, so the `dist/` artifacts are built automatically during installation.
+- Ensure you use Node.js 20+ as required by the `engines` field.
+
 ```ts
 import Piano from "web-audio-piano";
 
