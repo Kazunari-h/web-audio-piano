@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  base: "/web-audio-piano/",
   title: "Web Audio Piano",
   description: "TypeScript Web Audio API toolkit + React hook",
   lang: "en-US",
