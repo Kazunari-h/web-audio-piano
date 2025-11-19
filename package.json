@@ -1,0 +1,61 @@
+{
+  "name": "web-audio-piano",
+  "version": "1.1.0",
+  "description": "Lightweight piano sound library using Web Audio API + React Hook (TypeScript).",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "docs-site"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./usePiano": {
+      "types": "./dist/usePiano.d.ts",
+      "import": "./dist/usePiano.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:next": "npm run build --workspace web-audio-piano-next-demo",
+    "build:vite": "npm run build --workspace web-audio-piano-vite-demo",
+    "build:docs": "npm run build --workspace web-audio-piano-docs",
+    "build:all": "npm run build && npm run build:next && npm run build:vite && npm run build:docs",
+    "dev:next": "npm run dev --workspace web-audio-piano-next-demo",
+    "dev:vite": "npm run dev --workspace web-audio-piano-vite-demo",
+    "dev:docs": "npm run dev --workspace web-audio-piano-docs"
+  },
+  "keywords": [
+    "piano",
+    "audio",
+    "webaudio",
+    "audiocontext",
+    "music",
+    "sound",
+    "react",
+    "hook",
+    "typescript"
+  ],
+  "author": "Kazunari Hirosawa",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.6",
+    "typescript": "^5.9.3"
+  }
+}
