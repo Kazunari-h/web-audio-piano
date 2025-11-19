@@ -16,5 +16,5 @@ piano.play("C4", { duration: 1.2 });
 
 <div class="actions">
   <a class="vp-button" href="/guide/getting-started">Get started</a>
-  <a class="vp-button secondary" href="https://github.com/kazunarihirosawa/web-audio-piano">View on GitHub</a>
+  <a class="vp-button secondary" href="https://github.com/Kazunari-h/web-audio-piano">View on GitHub</a>
 </div>
