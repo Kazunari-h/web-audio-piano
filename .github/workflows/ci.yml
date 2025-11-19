@@ -20,17 +20,36 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Show Node / npm versions
+        run: |
+          node -v
+          npm -v
 
-      - name: Build library
-        run: npm run build
+      - name: Verify npm cache
+        run: npm cache verify
 
-      - name: Build Next.js demo
-        run: npm run build:next
+      - name: Install & Build library (root)
+        run: |
+          npm install
+          npm run build
 
-      - name: Build Vite demo
-        run: npm run build:vite
+      - name: Build Next.js demo (install per-workspace)
+        working-directory: ./apps/next-demo
+        run: |
+          rm -rf package-lock.json node_modules || true
+          npm install
+          npm run build
 
-      - name: Build docs site
-        run: npm run build:docs
+      - name: Build Vite demo (install per-workspace)
+        working-directory: ./apps/vite-demo
+        run: |
+          rm -rf package-lock.json node_modules || true
+          npm install
+          npm run build
+
+      - name: Build docs site (install per-workspace)
+        working-directory: ./docs-site
+        run: |
+          rm -rf package-lock.json node_modules || true
+          npm install
+          npm run build
