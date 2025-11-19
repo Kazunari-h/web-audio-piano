@@ -30,6 +30,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "build:next": "npm run build --workspace web-audio-piano-next-demo",
     "build:vite": "npm run build --workspace web-audio-piano-vite-demo",
     "build:docs": "npm run build --workspace web-audio-piano-docs",
@@ -51,6 +52,17 @@
   ],
   "author": "Kazunari Hirosawa",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-username>/web-audio-piano.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-username>/web-audio-piano/issues"
+  },
+  "homepage": "https://github.com/<your-username>/web-audio-piano#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "peerDependencies": {
     "react": ">=17.0.0"
   },
